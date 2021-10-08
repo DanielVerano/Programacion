@@ -19,7 +19,7 @@ public class Ejer6310 {
                 esPrimo = false;
             }
             for (int j = 2; j < i; j++) {
-                if (i % j == 0) {
+                if (i % 2 == 0 || i % j == 0) {
                     esPrimo = false;
                     break;
                 }
@@ -28,7 +28,7 @@ public class Ejer6310 {
                 System.out.println(i + " es primo");
                 numPrimos++;
             } else {
-                System.out.println(i + " no es primo");
+//                System.out.println(i + " no es primo");
             }
             esPrimo = true;
         }

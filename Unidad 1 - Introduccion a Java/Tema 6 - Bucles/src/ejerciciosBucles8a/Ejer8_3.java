@@ -1,3 +1,5 @@
+package ejerciciosBucles8a;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -13,9 +15,9 @@ public class Ejer8_3 {
             numIntroducido = sc.nextInt();
 
             if (numIntroducido > numAleatorio) {
-                System.out.println("Menor");
+                System.out.println("Menor que " + numIntroducido);
             } else if (numIntroducido < numAleatorio) {
-                System.out.println("Mayor");
+                System.out.println("Mayor que " + numIntroducido);
             } else {
                 System.out.println("Acertaste");
                 break;

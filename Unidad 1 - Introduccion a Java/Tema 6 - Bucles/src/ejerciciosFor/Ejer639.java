@@ -12,7 +12,7 @@ public class Ejer639 {
         numero = sc.nextInt();
 
         for (int i = 2; i < numero; i++) {
-            if (numero % i == 0) {
+            if (numero % 2 == 0 || numero % i == 0) {       // Si el número es par, nunca va a ser primo
                 esPrimo = false;
                 break;
             }

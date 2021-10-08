@@ -13,9 +13,7 @@ public class Ejer637 {
 
         for (int i = 0; i < altura; i++) {
             for (int j = 0; j < anchura; j++) {
-                if (i == 0 || i == (anchura-1)) {
-                    System.out.print("*");
-                } else if (j == 0 || j == (anchura-1)) {
+                if ((i == 0 || i == (anchura-1)) || (j == 0 || j == (anchura-1))) {
                     System.out.print("*");
                 } else {
                     System.out.print(" ");

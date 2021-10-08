@@ -1,3 +1,5 @@
+package ejerciciosBucles8a;
+
 import java.util.Scanner;
 
 public class Ejer8_8 {
