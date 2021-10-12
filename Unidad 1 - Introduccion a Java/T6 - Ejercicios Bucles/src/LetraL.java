@@ -3,16 +3,16 @@ import java.util.Scanner;
 public class LetraL {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int altura, anchura;
+        int altura, base;
 
         System.out.println("Introduzca la altura: ");
         altura = sc.nextInt();
-        anchura = (altura / 2) + 1;
+        base = (altura / 2) + 1;
 
-        for (int i = 1; i < altura; i++) {
+        for (int i = 0; i < altura - 1; i++) {
             System.out.println("*");
         }
-        for (int i = 0; i < anchura; i++) {
+        for (int i = 0; i < base; i++) {
             System.out.print("*");
         }
     }

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class LetraX_For {
+public class LetraX_b {
     public static void main(String[] args) {
 //        Doble For: Primero para la altura (numero de sout (i)), segundo para recorrer la cadena a imprimir (j).
         Scanner sc = new Scanner(System.in);

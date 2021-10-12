@@ -8,9 +8,9 @@ public class LetraU {
         System.out.println("Introduzca la altura: ");
         altura = sc.nextInt();
 
-        for (int i = 1; i < altura; i++) {
-            System.out.println("* *");
+        for (int i = 0; i < altura - 1; i++) {
+            System.out.println("**    **");
         }
-        System.out.println(" *");
+        System.out.println("  ****");
     }
 }

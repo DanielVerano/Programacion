@@ -9,25 +9,25 @@ public class Ejer8_9 {
 
 //        Hacerlo con un do while para preguntar al menos una vez
 
-        System.out.println("Introduce la altura del árbol en cms:");
-        masAlto = sc.nextInt();
-        numCodigos++;
-        codigoMasAlto = numCodigos;
-
-        while (true) {
+        do {
             System.out.println("Introduce la altura del árbol en cms:");
             altura = sc.nextInt();
+            numCodigos++;
 
+            if (masAlto == 0) {
+                masAlto = altura;
+                codigoMasAlto = numCodigos;
+            }
             if (altura == -1) {
                 break;
             }
-            numCodigos++;
-
             if (altura > masAlto) {
                 masAlto = altura;
                 codigoMasAlto = numCodigos;
             }
         }
+        while (true);
+
         System.out.println("El árbol " + codigoMasAlto + " es el más alto con " + masAlto + " cms");
     }
 }
