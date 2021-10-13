@@ -10,7 +10,18 @@ public class Ejer4 {
         int numNeg = 0;
         int cont = 0;
 
-        while (cont < 10) {
+        for (int i = 1; i <= 10; i++) {
+            System.out.println("Introduce el número " + i + ":");
+            num = sc.nextInt();
+
+            if (num > 0) {
+                numPos++;
+            } else {
+                numNeg++;
+            }
+        }
+
+        /*while (cont < 10) {
             System.out.println("Introduce un número:");
             num = sc.nextInt();
 
@@ -20,7 +31,7 @@ public class Ejer4 {
                 numNeg++;
             }
             cont++;
-        }
+        }*/
         System.out.println("Números positivos: " + numPos);
         System.out.println("Números negativos: " + numNeg);
     }
