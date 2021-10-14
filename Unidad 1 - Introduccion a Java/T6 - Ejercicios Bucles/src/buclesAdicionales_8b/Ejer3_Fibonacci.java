@@ -9,7 +9,7 @@ public class Ejer3_Fibonacci {
         int num, siguienteNum;
         int numAnterior1 = 0;
         int numAnterior2 = 1;
-        StringBuilder secuencia = new StringBuilder();
+//        StringBuilder secuencia = new StringBuilder();
 
         System.out.println("Introduzca el número de términos de la secuencia de Fibonacci: ");
         num = sc.nextInt();
@@ -19,15 +19,17 @@ public class Ejer3_Fibonacci {
         } else if (num == 1) {
             System.out.println("0, 1");
         } else {
-            secuencia.append("0, 1");
+            System.out.print("0, 1");
+//            secuencia.append("0, 1");
 
             for (int i = 2; i < num; i++) {
                 siguienteNum = numAnterior1 + numAnterior2;
                 numAnterior1 = numAnterior2;
                 numAnterior2 = siguienteNum;
-                secuencia.append(", ").append(siguienteNum);    // append(", " + siguienteNum)
+                System.out.print(", " + siguienteNum);
+//                secuencia.append(", ").append(siguienteNum);    // append(", " + siguienteNum)
             }
-            System.out.println("Secuencia: " + secuencia);
+//            System.out.println("Secuencia: " + secuencia);
         }
     }
 }
