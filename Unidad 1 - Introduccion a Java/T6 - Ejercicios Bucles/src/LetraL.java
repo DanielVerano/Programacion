@@ -13,7 +13,7 @@ public class LetraL {
             System.out.println("*");
         }
         for (int i = 0; i < base; i++) {
-            System.out.print("*");
+            System.out.print("* ");
         }
     }
 }
