@@ -1,4 +1,4 @@
-public class Ejer_String {
+public class InvertirCadena {
     public static void main(String[] args) {
         String s = "56789";
 
