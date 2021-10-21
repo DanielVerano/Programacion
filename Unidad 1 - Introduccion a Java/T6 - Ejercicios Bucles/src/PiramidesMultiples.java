@@ -24,25 +24,19 @@ public class PiramidesMultiples {
             for (int k = 0; k < numPiramides; k++) {
 
                 if (k == 0) {
-
-//                    Imprimir 1ra pirámide
+//                    Imprimir espacios 1ra pirámide
                     for (int j = 0; j < numEsp; j++) {
                         System.out.print(" ");
                     }
-
-                    for (int j = 0; j < altura * 2 - 1 - 2 * numEsp; j++) {
-                        System.out.print("*");
-                    }
                 } else {
-
-//                    Imprimir después de la 1ra pirámide
+//                    Imprimir espacios después de la 1ra pirámide
                     for (int j = 0; j < 2 * numEsp; j++) {
                         System.out.print(" ");
                     }
+                }
 
-                    for (int j = 0; j < altura * 2 - 1 - 2 * numEsp; j++) {
-                        System.out.print("*");
-                    }
+                for (int j = 0; j < altura * 2 - 1 - 2 * numEsp; j++) {
+                    System.out.print("*");
                 }
 
 //                Imprimir un espacio después de cada pirámide menos la última
