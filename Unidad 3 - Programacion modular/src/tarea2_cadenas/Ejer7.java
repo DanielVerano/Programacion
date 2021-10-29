@@ -18,8 +18,10 @@ public class Ejer7 {
             for (int i = 0; i < pass.length(); i++) {
                 if (respuesta.charAt(i) < pass.charAt(i)) {
                     System.out.println("Menor");
+                    break;
                 } else if (respuesta.charAt(i) > pass.charAt(i)) {
                     System.out.println("Mayor");
+                    break;
                 }
             }
         }
