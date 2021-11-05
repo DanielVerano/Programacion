@@ -13,7 +13,7 @@ public class Ejer3 {
         if (cadena.charAt(cadena.length() / 2) == ' ') {
             System.out.println("El carácter en la posición " + (cadena.length() / 2) + " es un espacio");
         } else {
-            System.out.println("No es un espacio");
+            System.out.println("El carácter " + (cadena.charAt(cadena.length() / 2)) + " no es un espacio");
         }
     }
 }

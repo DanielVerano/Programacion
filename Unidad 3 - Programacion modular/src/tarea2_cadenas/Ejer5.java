@@ -20,11 +20,11 @@ public class Ejer5 {
     }
 
     public static boolean esVocal(char c) {
-        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' ||c == 'u' ||
-                c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' ||
-                c == 'á' || c == 'é' || c == 'í' || c == 'ó' || c == 'ú' ||
-                c == 'Á' || c == 'É' || c == 'Í' || c == 'Ó' || c == 'Ú') {
-            return true;
+        char[] vocales = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U', 'á', 'é', 'í', 'ó', 'ú', 'Á', 'É', 'Ì', 'Ò', 'Ú'};
+        for (int i = 0; i < vocales.length; i++) {
+            if (c == vocales[i]) {
+                return true;
+            }
         }
         return false;
     }

@@ -15,14 +15,12 @@ public class Ejer7 {
             System.out.println("Introduce su respuesta:");
             respuesta = sc.nextLine();
 
-            for (int i = 0; i < pass.length(); i++) {
-                if (respuesta.charAt(i) < pass.charAt(i)) {
-                    System.out.println("Menor");
-                    break;
-                } else if (respuesta.charAt(i) > pass.charAt(i)) {
-                    System.out.println("Mayor");
-                    break;
-                }
+            if (respuesta.compareTo(pass) < 0) {
+                System.out.println(respuesta + " es menor que " + pass);
+            } else if (respuesta.compareTo(pass) > 0) {
+                System.out.println(respuesta + " es mayor que " + pass);
+            } else {
+                System.out.println("Acertaste");
             }
         }
     }
