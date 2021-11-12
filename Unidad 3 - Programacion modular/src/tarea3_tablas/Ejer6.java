@@ -9,27 +9,25 @@ public class Ejer6 {
     }
 
     public static int[] sinRepetidos(int[] t) {
-        int[] resultado = new int[1];
-        boolean esta;
+        int[] resultado = new int[0];
 
         for (int i = 0; i < t.length; i++) {
             int n = t[i];
-            esta = false;
 
-            for (int j = i + 1; j < t.length; j++) {
-                if (n == t[j]) {
-                    esta = true;
-                    break;
-                }
-            }
-
-            if (!esta) {
-                int[] aux = new int[resultado.length + 1];
-                aux[i] = n;
-                resultado = aux;
+            if (!esta(resultado, n)) {
+                resultado = Arrays.copyOf(resultado, resultado.length + 1);
+                resultado[resultado.length - 1] = n;
             }
         }
-
         return resultado;
+    }
+
+    public static boolean esta(int[] a, int n) {
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == n) {
+                return true;
+            }
+        }
+        return false;
     }
 }
