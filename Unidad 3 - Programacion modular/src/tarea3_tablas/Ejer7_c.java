@@ -25,23 +25,28 @@ public class Ejer7_c {
             }
         }
 
+//        Al imprimir un array de arrays, nos muestra las referencias de los arrays, para imprimir el contenido tenemos que usar deepToString
 //        System.out.println(Arrays.toString(notas));
         System.out.println(Arrays.deepToString(notas));
 
+//        Otra manera de recorrer un vector de vectores
         for (int i = 0; i < notas.length; i++) {
             System.out.println(Arrays.toString(notas[i]));
         }
 
 //        Media de los trimestres (recorriendo las columnas)
         int suma;
+
         for (int j = 0; j < notas[j].length; j++) {
             suma = 0;
+
             for (int i = 0; i < notas.length; i++) {
                 suma += notas[i][j];
             }
-            System.out.println("La nota media para el trimestre " + (j+1) + ": " + (double) (suma / notas.length));
+            System.out.println("La nota media para el trimestre " + (j+1) + ": " + (double) suma / notas.length);
         }
 
+//        Buscar nota media de alumno
         int pos;
         sc.nextLine();
 
@@ -57,8 +62,7 @@ public class Ejer7_c {
                 for (int i = 0; i < notas[pos].length; i++) {
                     suma += notas[pos][i];
                 }
-
-                System.out.println("La nota media del alumno " + alumnos[pos] + " es " + (double) (suma + notas.length));
+                System.out.println("La nota media del alumno " + alumnos[pos] + " es " + (double) suma / notas[pos].length);
             }
         }
         while (pos != -1);

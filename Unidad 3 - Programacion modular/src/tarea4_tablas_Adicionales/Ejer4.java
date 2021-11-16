@@ -2,16 +2,18 @@ package tarea4_tablas_Adicionales;
 
 public class Ejer4 {
     public static void main(String[] args) {
+//        a - h = columnas; 1 - 8 = filas
         posicionesAlfil("d5");
     }
 
     public static void posicionesAlfil(String posicion) {
-        int posCol = posicion.charAt(0) - 'a';
-        int posFila = Character.getNumericValue(posicion.charAt(1)) - 1;
-        String posiciones = "";
+        boolean esCorrecta = posicionEsCorrecta(posicion);
 
-        if (posicion.length() == 2 && (posCol >= 0 && posCol <= 7) && (posFila >= 0 && posFila <= 7)) {
+        if (esCorrecta) {
+            int posCol = posicion.charAt(0) - 'a';
+            int posFila = Character.getNumericValue(posicion.charAt(1)) - 1;
             int[][] tablero = new int[8][8];
+            String posiciones = "";
 
             for (int i = 0; i < tablero.length; i++) {
                 for (int j = 0; j < tablero[i].length; j++) {
@@ -27,5 +29,17 @@ public class Ejer4 {
         } else {
             System.out.println("La posicion introducida es incorrecta");
         }
+    }
+
+    public static boolean posicionEsCorrecta(String posicion) {
+        if (posicion.length() == 2) {
+            int posCol = posicion.charAt(0) - 'a';
+            int posFila = Character.getNumericValue(posicion.charAt(1)) - 1;
+
+            if ((posCol >= 0 && posCol <= 7) && (posFila >= 0 && posFila <= 7)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

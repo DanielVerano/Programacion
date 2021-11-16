@@ -10,11 +10,7 @@ public class Ejer9 {
         int[] apuesta = new int[6];
         int aciertos = 0;
 
-//        for (int i = 0; i < numerosPrimitiva.length; i++) {
-//            numerosPrimitiva[i] = (int) (Math.random() * 5) + 1;
-//        }
-
-        rellenarNumeros(numerosPrimitiva);
+        numerosPrimitiva = generarNumerosPrimitiva(numerosPrimitiva.length);
 
         for (int i = 0; i < apuesta.length; i++) {
             System.out.println("Introduce el número " + (i+1) + " de la apuesta:");
@@ -30,27 +26,28 @@ public class Ejer9 {
         System.out.println("Número de aciertos: " + aciertos);
     }
 
-    public static void rellenarNumeros(int[] numeros) {
+    public static int[] generarNumerosPrimitiva(int numero) {
+        int[] aux = new int[0];
         boolean esta;
 
-        for (int i = 0; i < numeros.length; i++) {
-            int random = (int) (Math.random() * 5) + 1;
+//        Generar números aleatorios que no se repitan
+        for (int i = 0; i < numero; i++) {
 
             do {
-                esta = esta(numeros, random);
+                int aleatorio = (int) (Math.random() * 10) + 1;
+                esta = existe(aux, aleatorio);
 
                 if (!esta) {
-                    numeros[i] = random;
-                } else {
-                    random = (int) (Math.random() * 5) + 1;
-                    esta = true;
+                    aux = Arrays.copyOf(aux, aux.length + 1);
+                    aux[i] = aleatorio;
                 }
             }
             while (esta);
         }
+        return aux;
     }
 
-    public static boolean esta(int[] a, int num) {
+    public static boolean existe(int[] a, int num) {
         for (int i = 0; i < a.length; i++) {
             if (a[i] == num) {
                 return true;
