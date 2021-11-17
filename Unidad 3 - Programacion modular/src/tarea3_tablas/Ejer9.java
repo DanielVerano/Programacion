@@ -16,7 +16,7 @@ public class Ejer9 {
             System.out.println("Introduce el número " + (i+1) + " de la apuesta:");
             apuesta[i] = sc.nextInt();
 
-            if (apuesta[i] == numerosPrimitiva[i]) {
+            if (existe(numerosPrimitiva, apuesta[i])) {
                 aciertos++;
             }
         }

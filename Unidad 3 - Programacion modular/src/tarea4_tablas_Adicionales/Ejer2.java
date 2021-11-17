@@ -22,12 +22,12 @@ public class Ejer2 {
         String[] resultado = new String[v1.length];
         String[] auxColores = new String[0];
         String[] auxNoColores = new String[0];
-        boolean esta;
+        boolean esColor;
 
         for (int i = 0; i < v1.length; i++) {
-            esta = esta(colores, v1[i]);
+            esColor = esta(colores, v1[i]);
 
-            if (esta) {
+            if (esColor) {
                 auxColores = Arrays.copyOf(auxColores, auxColores.length + 1);
                 auxColores[auxColores.length - 1] = v1[i];
 
@@ -35,7 +35,6 @@ public class Ejer2 {
                 auxNoColores = Arrays.copyOf(auxNoColores, auxNoColores.length + 1);
                 auxNoColores[auxNoColores.length - 1] = v1[i];
             }
-
         }
 
         for (int i = 0; i < auxColores.length; i++) {

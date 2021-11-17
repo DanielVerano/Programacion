@@ -20,12 +20,20 @@ public class Ejer3 {
         do {
             System.out.println("Mesa Nº: " + numMesa);
             System.out.println("Ocupaciones: " + ocupaciones);
-            System.out.println("Introduce el número de personas:");
-            grupo = sc.nextInt();
+
+            do {
+                System.out.println("Introduce el número de personas:");
+                grupo = sc.nextInt();
+
+                if (grupo > 4) {
+                    System.out.println("Lo siento, no admitimos grupos de " + grupo);
+                }
+            }
+            while (grupo > 4);
             sentado = false;
 
             for (int i = 0; i < mesas.length; i++) {
-                if (mesas[i] == 0 && grupo <= 4) {
+                if (mesas[i] == 0) {
                     mesas[i] = grupo;
                     System.out.println("Por favor, siéntense en la mesa número " + (i + 1));
                     sentado = true;
