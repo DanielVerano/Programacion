@@ -9,13 +9,16 @@ public class Ejer4 {
         int[][] a = new int[filas][cols];
         int max, min;
         boolean esta;
+        String posMax = "";
+        String posMin = "";
+
         max = 0;
         min = 0;
 
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < a[i].length; j++) {
                 do {
-                    int r = (int) (Math.random() * 901) + 100;
+                    int r = (int) (Math.random() * (1001-100)) + 100;
                     esta = esRepetido(a, r);
 
                     if (!esta) {
@@ -29,8 +32,10 @@ public class Ejer4 {
                     min = a[0][0];
                 } else if (max < a[i][j]) {
                     max = a[i][j];
+                    posMax = "(" + i + "," + j + ")";
                 } else if (min > a[i][j]) {
                     min = a[i][j];
+                    posMin = "(" + i + "," + j + ")";
                 }
             }
         }
@@ -40,6 +45,8 @@ public class Ejer4 {
         }
         System.out.println("Máximo: " + max);
         System.out.println("Mínimo: " + min);
+        System.out.println("Posición máximo: " + posMax);
+        System.out.println("Posición mínimo: " + posMin);
     }
 
     public static boolean esRepetido(int[][] v, int n) {

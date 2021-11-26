@@ -1,29 +1,37 @@
 package Entregable2021_Manana;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Ejer3 {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         int[][] a = {{45, 92, 14, 20, 25, 78},
                 {35, 72, 24, 45, 42, 60},
                 {32, 42, 64, 23, 41, 39},
                 {98, 45, 94, 11, 18, 48}};
 
-//        int[][] b = new int[10][10];
+        int[][] b;
 
-        /*for (int i = 0; i < b.length; i++) {
+        System.out.println("Introduce el número de filas:");
+        int filas = sc.nextInt();
+        System.out.println("Introduce el número de columnas:");
+        int cols = sc.nextInt();
+
+        b = new int[filas][cols];
+
+        for (int i = 0; i < b.length; i++) {
             for (int j = 0; j < b[i].length; j++) {
-                b[i][j] = (int) (Math.random() * 101);
+                b[i][j] = (int) (Math.random() * 100);
             }
         }
 
         for (int[] fila : b) {
             System.out.println(Arrays.toString(fila));
         }
-        System.out.println(Arrays.toString(corteza(b)));*/
 
-        System.out.println(Arrays.toString(corteza(a)));
-        System.out.println(Arrays.toString(cortezaCopyOf(a)));
+        System.out.println(Arrays.toString(corteza(b)));
+        System.out.println(Arrays.toString(cortezaCopyOf(b)));
     }
 
     public static int[] corteza(int[][] n) {
