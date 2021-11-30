@@ -1,6 +1,7 @@
 package Examen2021_Rojo;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Ejer4 {
     public static void main(String[] args) {
@@ -22,6 +23,38 @@ public class Ejer4 {
         for (String[] fila : r) {
             System.out.println(Arrays.toString(fila));
         }
+
+        Scanner sc = new Scanner(System.in);
+        String[][] c, d;
+
+        System.out.println("Introduce las filas:");
+        int filas = sc.nextInt();
+        System.out.println("Introduce las columnas:");
+        int cols = sc.nextInt();
+
+        c = new String[filas][cols];
+        d = new String[filas][cols];
+        sc.nextLine();
+
+        for (int i = 0; i < c.length; i++) {
+            for (int j = 0; j < c[i].length; j++) {
+                System.out.println("Introduce una palabra:");
+                c[i][j] = sc.nextLine();
+            }
+        }
+
+        for (int i = 0; i < d.length; i++) {
+            for (int j = 0; j < d[i].length; j++) {
+                System.out.println("Introduce una palabra:");
+                d[i][j] = sc.nextLine();
+            }
+        }
+
+        String[][] r2 = unirMatrices(c,d);
+
+        for (String[] fila : r2) {
+            System.out.println(Arrays.toString(fila));
+        }
     }
 
     public static String[][] unirMatrices(String[][] v1, String[][] v2) {
@@ -36,8 +69,8 @@ public class Ejer4 {
             }
 
             for (int i = 0; i < res.length; i++) {
-                for (int j = 0; j < res[i].length - v1.length; j++) {
-                    res[i][v1.length + j] = v2[i][j];
+                for (int j = 0; j < res[i].length - v2[i].length; j++) {
+                    res[i][v1[i].length + j] = v2[i][j];
                 }
             }
 

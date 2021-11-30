@@ -24,7 +24,7 @@ public class Ejer3 {
                 med += estaturas[i][j];
                 System.out.print(estaturas[i][j] + " ");
             }
-            System.out.print("| " + (med / 10) + " " + min + " " + max);
+            System.out.print("| " + (med / estaturas[i].length) + " " + min + " " + max);
             System.out.println();
         }
     }
