@@ -5,8 +5,16 @@ import java.util.Scanner;
 
 public class Ejer4 {
     public static void main(String[] args) {
-        String[][] a = {{"HOLA","PERRO","C++"},{"ADIOS","GATO","PYTHON"},{"HASTA LUEGO","VACA","JAVA"}};
-        String[][] b = {{"BD","SOBRESALIENTE","PEPE"},{"LM","NOTABLE","MANUEL"},{"PROG","APROBADO","ROSA"}};
+        String[][] a = {
+                {"HOLA","PERRO","C++"},
+                {"ADIOS","GATO","PYTHON"},
+                {"HASTA LUEGO","VACA","JAVA"}
+        };
+        String[][] b = {
+                {"BD","SOBRESALIENTE","PEPE"},
+                {"LM","NOTABLE","MANUEL"},
+                {"PROG","APROBADO","ROSA"}
+        };
 
         for (String[] fila : a) {
             System.out.println(Arrays.toString(fila));

@@ -43,4 +43,15 @@ public class Ejer3 {
         }
         return res;
     }
+
+    public static int[][] rotar180Grados(int[][] v) {
+        int[][] res = new int[v.length][v[0].length];
+
+        for (int i = 0; i < v.length; i++) {
+            for (int j = 0; j < v[i].length; j++) {
+                res[v.length-1-i][v[0].length-1-j] = v[i][j];
+            }
+        }
+        return res;
+    }
 }
