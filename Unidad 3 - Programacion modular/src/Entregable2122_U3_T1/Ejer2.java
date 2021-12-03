@@ -1,4 +1,4 @@
-package Verano_Moreno_U3_T1;
+package Entregable2122_U3_T1;
 
 public class Ejer2 {
     public static void main(String[] args) {

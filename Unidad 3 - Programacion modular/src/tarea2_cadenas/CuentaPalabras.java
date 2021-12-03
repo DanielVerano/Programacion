@@ -1,3 +1,5 @@
+package tarea2_cadenas;
+
 public class CuentaPalabras {
     public static void main(String[] args) {
         String cadena = "hola que tal";
