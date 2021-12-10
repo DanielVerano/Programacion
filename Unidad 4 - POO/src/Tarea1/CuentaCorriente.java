@@ -5,7 +5,9 @@ public class CuentaCorriente {
     private int saldo;
     private int limite;
     public String nombre;
-    private String dni;
+    String dni;
+    private static String entidad = "CaixaBank";
+    private Banco banco;
 
     public CuentaCorriente(String nombre, String dni) {
         this.nombre = nombre;
@@ -57,6 +59,14 @@ public class CuentaCorriente {
         this.dni = dni;
     }
 
+    public static String getEntidad() {
+        return entidad;
+    }
+
+    public static void setEntidad(String entidad) {
+        CuentaCorriente.entidad = entidad;
+    }
+
     public boolean sacarDinero(double dinero) {
         if (this.saldo - dinero >= this.limite) {
             saldo -= dinero;
@@ -71,6 +81,10 @@ public class CuentaCorriente {
 
     public void mostrar() {
         System.out.println(this);
+    }
+
+    public String mostrarBanco() {
+        return banco.toString();
     }
 
     @Override
