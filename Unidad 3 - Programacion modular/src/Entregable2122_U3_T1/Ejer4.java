@@ -26,7 +26,13 @@ public class Ejer4 {
     public static int[][] desplazarMatriz(int[][] v, int columnas) {
         int[][] res = new int[v.length][v[0].length];
 
-        if (columnas > v[0].length) {
+        for (int i = 0; i < v.length; i++) {
+            for (int j = 0; j < v[i].length; j++) {
+                res[i][(j + columnas) % v[i].length] = v[i][j];
+            }
+        }
+
+        /*if (columnas > v[0].length) {
             columnas = columnas % v[0].length;
         }
 
@@ -40,7 +46,7 @@ public class Ejer4 {
             for (int j = 0; j < columnas; j++) {
                 res[i][j] = v[i][v[0].length - columnas + j];
             }
-        }
+        }*/
         return res;
     }
 }
