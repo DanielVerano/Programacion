@@ -6,14 +6,18 @@ public class CuentaCorriente {
     private int limite;
     public String nombre;
     String dni;
-    private static String entidad = "CaixaBank";
     private Banco banco;
 
-    public CuentaCorriente(String nombre, String dni) {
+    public CuentaCorriente(String nombre, String dni, Banco banco) {
         this.nombre = nombre;
         this.dni = dni;
         this.saldo = 0;
         this.limite = -50;
+        this.banco = banco;
+    }
+
+    public CuentaCorriente(String nombre, String dni) {
+        this(nombre, dni, null);
     }
 
     public CuentaCorriente(int saldo) {
@@ -59,12 +63,12 @@ public class CuentaCorriente {
         this.dni = dni;
     }
 
-    public static String getEntidad() {
-        return entidad;
+    public Banco getBanco() {
+        return banco;
     }
 
-    public static void setEntidad(String entidad) {
-        CuentaCorriente.entidad = entidad;
+    public void setBanco(Banco banco) {
+        this.banco = banco;
     }
 
     public boolean sacarDinero(double dinero) {
@@ -81,10 +85,6 @@ public class CuentaCorriente {
 
     public void mostrar() {
         System.out.println(this);
-    }
-
-    public String mostrarBanco() {
-        return banco.toString();
     }
 
     @Override

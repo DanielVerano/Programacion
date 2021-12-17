@@ -1,7 +1,7 @@
 package Tarea1;
 
 public class Banco {
-    private String nombre;
+    private final String nombre;
     private int capital;
     private String direccion;
 
@@ -11,8 +11,8 @@ public class Banco {
         this.direccion = direccion;
     }
 
-    public Banco(String nombre) {
-        this(nombre, 5200000, "");
+    public Banco(String nombre, String direccion) {
+        this(nombre, 5200000, direccion);
     }
 
     public String getNombre() {
@@ -34,6 +34,4 @@ public class Banco {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-
-
 }
