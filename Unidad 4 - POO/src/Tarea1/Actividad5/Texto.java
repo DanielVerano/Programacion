@@ -1,4 +1,4 @@
-package Tarea1;
+package Tarea1.Actividad5;
 
 public class Texto {
     private String cadena;

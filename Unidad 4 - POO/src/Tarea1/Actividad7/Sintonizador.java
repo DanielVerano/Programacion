@@ -1,4 +1,4 @@
-package Tarea1;
+package Tarea1.Actividad7;
 
 public class Sintonizador {
     private double frecuencia;

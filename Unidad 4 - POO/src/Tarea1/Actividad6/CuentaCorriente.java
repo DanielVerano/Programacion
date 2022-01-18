@@ -1,4 +1,4 @@
-package Tarea1;
+package Tarea1.Actividad6;
 
 public class CuentaCorriente {
 
