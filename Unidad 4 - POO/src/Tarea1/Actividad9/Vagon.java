@@ -1,4 +1,4 @@
-package Tarea1.Actividad9.Maquinaria;
+package Tarea1.Actividad9;
 
 class Vagon {
     private int capacidadMaxima;

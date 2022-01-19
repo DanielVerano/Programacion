@@ -1,4 +1,4 @@
-package Tarea1.Actividad9.Personal;
+package Tarea1.Actividad9;
 
 public class Maquinista {
     private String nombreCompleto;

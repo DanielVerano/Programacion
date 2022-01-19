@@ -1,6 +1,4 @@
-package Tarea1.Actividad9.Maquinaria;
-
-import Tarea1.Actividad9.Personal.Maquinista;
+package Tarea1.Actividad9;
 
 import java.util.Arrays;
 
@@ -8,6 +6,7 @@ public class Tren {
     private Locomotora locomotora;
     private Vagon[] vagones;
     private Maquinista maquinista;
+    private static final int CAP_MAX = 5;
 
     public Tren(Locomotora locomotora, Maquinista maquinista) {
         this.locomotora = locomotora;
@@ -27,8 +26,16 @@ public class Tren {
         return vagones;
     }
 
+    public Maquinista getMaquinista() {
+        return maquinista;
+    }
+
+    public void setMaquinista(Maquinista maquinista) {
+        this.maquinista = maquinista;
+    }
+
     public boolean addVagon(Vagon v) {
-        if (vagones.length < 5) {
+        if (vagones.length < Tren.CAP_MAX) {
             Vagon[] res = Arrays.copyOf(vagones, vagones.length + 1);
             res[res.length - 1] = v;
             this.vagones = res;
@@ -37,12 +44,19 @@ public class Tren {
         return false;
     }
 
-    public Maquinista getMaquinista() {
-        return maquinista;
-    }
+    public boolean removeVagon() {
+        if (vagones.length > 0) {
+            Vagon[] res = new Vagon[vagones.length - 1];
 
-    public void setMaquinista(Maquinista maquinista) {
-        this.maquinista = maquinista;
+            for (int i = 0; i < res.length; i++) {
+                res[i] = vagones[i];
+            }
+
+            vagones = res;
+            return true;
+        }
+
+        return false;
     }
 
     @Override

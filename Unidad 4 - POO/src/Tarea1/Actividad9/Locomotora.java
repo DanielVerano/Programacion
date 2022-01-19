@@ -1,6 +1,4 @@
-package Tarea1.Actividad9.Maquinaria;
-
-import Tarea1.Actividad9.Personal.Mecanico;
+package Tarea1.Actividad9;
 
 public class Locomotora {
     private String matricula;
