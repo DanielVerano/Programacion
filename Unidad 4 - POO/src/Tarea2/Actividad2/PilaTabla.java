@@ -13,14 +13,6 @@ public class PilaTabla {
         return numeros;
     }
 
-    public void setNumeros(Integer[] numeros) {
-        this.numeros = numeros;
-    }
-
-    public int cima() {
-        return numeros[numeros.length - 1];
-    }
-
     public void apilar(Integer numero) {
         Integer[] res = Arrays.copyOf(numeros, numeros.length + 1);
         res[res.length - 1] = numero;
@@ -29,15 +21,17 @@ public class PilaTabla {
 
     public boolean desapilar() {
         if (numeros.length > 0) {
-            Integer[] res = new Integer[numeros.length - 1];
-
-            for (int i = 0; i < numeros.length - 1; i++) {
-                res[i] = numeros[i];
-            }
-            numeros = res;
+            numeros = Arrays.copyOf(numeros, numeros.length - 1);
             return true;
         }
         return false;
+    }
+
+    public int cima() {
+        if (numeros.length > 0) {
+            return numeros[numeros.length - 1];
+        }
+        return -1;
     }
 
     @Override

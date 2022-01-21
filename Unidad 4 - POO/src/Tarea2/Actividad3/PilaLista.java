@@ -6,7 +6,7 @@ public class PilaLista {
     private Lista lista;
 
     public PilaLista() {
-        this.lista = new Lista();
+        this.lista = new Lista(100);
     }
 
     public PilaLista(Lista lista) {
@@ -15,10 +15,6 @@ public class PilaLista {
 
     public Lista getLista() {
         return lista;
-    }
-
-    public void setLista(Lista lista) {
-        this.lista = lista;
     }
 
     public boolean apilar(int numero) {
@@ -30,7 +26,10 @@ public class PilaLista {
     }
 
     public int cima() {
-        return lista.getTabla()[lista.getTabla().length - 1];
+        if (lista.getTabla().length > 0) {
+            return lista.getTabla()[lista.getTabla().length - 1];
+        }
+        return -1;
     }
 
     @Override
