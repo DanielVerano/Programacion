@@ -19,5 +19,6 @@ public class Main {
         pizzeria1.addPedido(ped1);
         System.out.println(pizzeria1);
         System.out.println(pizza1);
+        Pizza.getSizes();
     }
 }

@@ -28,10 +28,6 @@ public class Pizza {
         return ingredientes;
     }
 
-    public int getNumIngredientes() {
-        return ingredientes.length;
-    }
-
     public boolean addIngrediente(Ingrediente ingrediente) {
         if (ingredientes.length < CAP_MAX) {
             Ingrediente[] res = Arrays.copyOf(ingredientes, ingredientes.length + 1);
@@ -40,6 +36,12 @@ public class Pizza {
             return true;
         }
         return false;
+    }
+
+    public static void getSizes() {
+        for (int i = 0; i < Tamano.values().length; i++) {
+            System.out.println(Tamano.values()[i]);
+        }
     }
 
     @Override

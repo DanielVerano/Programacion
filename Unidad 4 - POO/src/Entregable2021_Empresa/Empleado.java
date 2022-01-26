@@ -9,7 +9,7 @@ public class Empleado {
     private String telefono;
     private Calendar fechaIngreso;
     private TipoEmpleado tipo;
-    private static int numEmpleados;
+    private static int numEmpleados = 0;
 
     public Empleado(String nombreCompleto, String numSegSocial, String telefono, TipoEmpleado tipo) {
         this.nombreCompleto = nombreCompleto;
@@ -17,6 +17,7 @@ public class Empleado {
         this.telefono = telefono;
         this.fechaIngreso = Calendar.getInstance();
         this.tipo = tipo;
+        Empleado.numEmpleados++;
     }
 
     public Empleado(String nombreCompleto, String numSegSocial, String telefono) {

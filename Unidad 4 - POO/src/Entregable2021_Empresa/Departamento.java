@@ -8,12 +8,14 @@ public class Departamento {
     private String sede;
     private String extension;
     private Empleado[] empleados;
+    private static int numDepartamentos = 0;
 
     public Departamento(String nombre, String sede, String extension) {
         this.nombre = nombre;
         this.sede = sede;
         this.extension = extension;
         this.empleados = new Empleado[0];
+        Departamento.numDepartamentos++;
     }
 
     public Departamento(String nombre, String extension) {
@@ -93,6 +95,10 @@ public class Departamento {
             }
         }
         return false;
+    }
+
+    public static int getNumDepartamentos() {
+        return numDepartamentos;
     }
 
     @Override
