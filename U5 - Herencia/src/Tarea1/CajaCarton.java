@@ -18,7 +18,7 @@ public class CajaCarton extends Caja {
     }
 
     public double getSuperficie() {
-        return (getAncho() * getAlto() * 4) + (getAncho() * getFondo() * 2);
+        return (getAncho() * getAlto() * 4) + (getAlto() * getFondo() * 2);
     }
 
     @Override
