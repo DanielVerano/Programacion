@@ -2,6 +2,7 @@ package Tarea1.Actividad9;
 
 public class Lavadora extends Electrodomestico {
     private double carga;
+    private final int CARGA_INICIAL = 5;
 
     public Lavadora(double precioBase, Color color, Consumo consumo, double peso, double carga) {
         super(precioBase, color, consumo, peso);
@@ -10,12 +11,12 @@ public class Lavadora extends Electrodomestico {
 
     public Lavadora() {
         super();
-        this.carga = 5;
+        this.carga = CARGA_INICIAL;
     }
 
     public Lavadora(double precioBase, double peso) {
         super(precioBase, peso);
-        this.carga = 5;
+        this.carga = CARGA_INICIAL;
     }
 
     public double getCarga() {
@@ -24,7 +25,7 @@ public class Lavadora extends Electrodomestico {
 
     @Override
     public double getPrecioFinal() {
-        if (getPeso() >= 30) {
+        if (getCarga() >= 30) {
             return super.getPrecioFinal() + 50;
         }
         return super.getPrecioFinal();

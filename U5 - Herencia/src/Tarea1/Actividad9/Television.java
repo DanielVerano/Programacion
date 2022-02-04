@@ -17,9 +17,7 @@ public class Television extends Electrodomestico {
     }
 
     public Television(double precioBase, double peso) {
-        super(precioBase, peso);
-        this.resolucion = 20;
-        this.tdt = false;
+        this(precioBase, Color.BLANCO, Consumo.F, peso, 20, false);
     }
 
     public double getResolucion() {
@@ -34,7 +32,7 @@ public class Television extends Electrodomestico {
     public double getPrecioFinal() {
         double result = super.getPrecioFinal();
 
-        if (getResolucion() >= 40) {
+        if (getResolucion() > 40) {
             result = result * 1.3;
         }
 
