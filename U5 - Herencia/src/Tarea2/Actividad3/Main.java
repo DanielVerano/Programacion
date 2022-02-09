@@ -8,7 +8,24 @@ public class Main {
 
         Cuadrado cuad1 = new Cuadrado(5, Color.ROJO);
         Triangulo t1 = new Triangulo(8, Color.VERDE, 12);
-        Circulo cir1 = new Circulo(6, Color.AZUL, 9);
+        Triangulo t2 = new Triangulo(7, Color.AZUL, 13);
+        Triangulo t3 = new Triangulo(6, Color.AMARILLO, 9);
+
+        Triangulo[] triangulos = {t1,t2,t3};
+
+        Arrays.sort(triangulos);
+
+        for (Triangulo t : triangulos) {
+            System.out.println(t);
+        }
+
+        Arrays.sort(triangulos, new ComparadorColor());
+
+        for (Triangulo t : triangulos) {
+            System.out.println(t);
+        }
+
+        /*Circulo cir1 = new Circulo(6, Color.AZUL, 9);
         Circulo cir2 = new Circulo(6, Color.AZUL, 6);
         Circulo cir3 = new Circulo(6, Color.AZUL, 3);
         Circulo cir4 = new Circulo(6, Color.AZUL, 1);
@@ -37,6 +54,6 @@ public class Main {
             }
         }
 
-        System.out.println(PoligonoRegular.getContadorPoligonos());
+        System.out.println(PoligonoRegular.getContadorPoligonos());*/
     }
 }

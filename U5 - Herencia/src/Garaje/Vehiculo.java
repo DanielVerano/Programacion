@@ -5,9 +5,9 @@ public abstract class Vehiculo {
     private int capacidad;
     private int capMax;
 
-    public Vehiculo(String nombre, int capacidad) {
+    public Vehiculo(String nombre, int capMax) {
         this.nombre = nombre;
-        this.capMax = capacidad;
+        this.capMax = capMax;
         this.capacidad = 0;
     }
 
@@ -27,7 +27,7 @@ public abstract class Vehiculo {
         return capMax;
     }
 
-    public boolean addPersonas(int cantidad) {
+    public boolean transportar(int cantidad) {
         if (this.capacidad + cantidad <= this.capMax) {
             this.capacidad += cantidad;
             return true;
@@ -40,6 +40,7 @@ public abstract class Vehiculo {
         return "Vehiculo{" +
                 "nombre='" + nombre + '\'' +
                 ", capacidad=" + capacidad +
+                ", capMax=" + capMax +
                 '}';
     }
 }

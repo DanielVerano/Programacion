@@ -52,6 +52,14 @@ public class Triangulo extends PoligonoRegular implements Comparable {
     @Override
     public int compareTo(Object o) {
         Triangulo t = (Triangulo) o;
-        return (int) (this.lado - t.altura);
+
+        double result = this.lado - t.getLado();
+
+        if (result > 0) {
+            return 1;
+        } else if (result < 0) {
+            return -1;
+        }
+        return 0;
     }
 }

@@ -2,7 +2,7 @@ package Garaje;
 
 import java.util.Objects;
 
-public abstract class VehiculoTerrestre extends Vehiculo {
+public abstract class VehiculoTerrestre extends Vehiculo implements Comparable<VehiculoTerrestre> {
     private String matricula;
     private int anio;
     private Color color;
@@ -58,5 +58,10 @@ public abstract class VehiculoTerrestre extends Vehiculo {
     @Override
     public int hashCode() {
         return Objects.hash(matricula);
+    }
+
+    @Override
+    public int compareTo(VehiculoTerrestre vt) {
+        return this.getMatricula().compareTo(vt.getMatricula());
     }
 }
