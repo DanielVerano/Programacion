@@ -49,35 +49,32 @@ public class Hora {
         this.segundos = segundos;
     }
 
-    public boolean addHora(int hora) {
+    public void addHora(int hora) {
         if (horas + hora > 23) {
             horas = (horas + hora) % 24;
         } else {
             horas = horas + hora;
         }
-        return false;
     }
 
-    public boolean addMinuto(int minuto) {
+    public void addMinuto(int minuto) {
         if (minutos + minuto > 59) {
             minutos = (minutos + minuto) % 60;
+            horas = horas + ((minutos + minuto) % 60);
 
-            if (horas + 1 > 23) {
-                horas = 0;
-            } else {
-                horas++;
+            if (horas > 23) {
+                horas = horas % 24;
             }
         } else {
             minutos = minutos + minuto;
         }
-        return false;
     }
 
     public void incrementar(int segundos) {
         setSegundos(getSegundos() + segundos);
 
         if (getSegundos() > 59) {
-            setMinutos(getMinutos() + segundos / 60);
+            setMinutos(getMinutos() + getSegundos() / 60);
             setSegundos(getSegundos() % 60);
         }
 
@@ -95,12 +92,4 @@ public class Hora {
     public String toString() {
         return "Hora: " + horas + ":" + minutos + ":" + segundos;
     }
-
-    /*if (n > 59) {
-            this.minutos = n / 60;
-            this.segundos = n % 60;
-        } else {
-            this.segundos = n;
-        }
-        this.horas = horas;*/
 }

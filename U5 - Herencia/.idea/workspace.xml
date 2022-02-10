@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1aa17f8a-857b-430f-8a73-dc995dfa0270" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/.idea/description.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/project-template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/.idea/project-template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unidad 5 - Herencia.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/Unidad 5 - Herencia.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Empleado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExamenAjedrez/Alfil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/ExamenAjedrez/Alfil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExamenAjedrez/Caballo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/ExamenAjedrez/Caballo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExamenAjedrez/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/ExamenAjedrez/Color.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExamenAjedrez/Movible.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/ExamenAjedrez/Movible.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExamenAjedrez/Peon.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/ExamenAjedrez/Peon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExamenAjedrez/PiezaAjedrez.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/ExamenAjedrez/PiezaAjedrez.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExamenAjedrez/PiezaBarquitos.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/ExamenAjedrez/PiezaBarquitos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExamenAjedrez/PiezaDamas.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/ExamenAjedrez/PiezaDamas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExamenAjedrez/PiezaTablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/ExamenAjedrez/PiezaTablero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExamenAjedrez/Reina.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/ExamenAjedrez/Reina.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExamenAjedrez/Rey.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/ExamenAjedrez/Rey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExamenAjedrez/Torre.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/ExamenAjedrez/Torre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Garaje/Avioneta.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Garaje/Avioneta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Garaje/Coche.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Garaje/Coche.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Garaje/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Garaje/Color.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Garaje/ComparadorAnio.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Garaje/ComparadorAnio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Garaje/Helicoptero.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Garaje/Helicoptero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Garaje/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Garaje/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Garaje/Motocicleta.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Garaje/Motocicleta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Garaje/Vehiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Garaje/Vehiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Garaje/VehiculoAereo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Garaje/VehiculoAereo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Garaje/VehiculoTerrestre.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Garaje/VehiculoTerrestre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Garaje/Vuela.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Garaje/Vuela.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Interfaces/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/Caracol.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Interfaces/Caracol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/Gato.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Interfaces/Gato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Interfaces/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/Morir.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Interfaces/Morir.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/Perro.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Interfaces/Perro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/Voz.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Interfaces/Voz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Juego_RPG/Atacar.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Juego_RPG/Atacar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Juego_RPG/Elfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Juego_RPG/Elfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Juego_RPG/Enano.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Juego_RPG/Enano.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Juego_RPG/Guerrero.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Juego_RPG/Guerrero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Juego_RPG/Hombre.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Juego_RPG/Hombre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Juego_RPG/Magia.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Juego_RPG/Magia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Juego_RPG/Mago.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Juego_RPG/Mago.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Juego_RPG/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Juego_RPG/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Juego_RPG/Orco.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Juego_RPG/Orco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Juego_RPG/Personaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Juego_RPG/Personaje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Juego_RPG/RPG.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Juego_RPG/RPG.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Juego_RPG/TipoElfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Juego_RPG/TipoElfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea1/Actividad9/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea1/Actividad9/Color.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea1/Actividad9/Consumo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea1/Actividad9/Consumo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea1/Actividad9/Electrodomestico.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea1/Actividad9/Electrodomestico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea1/Actividad9/Lavadora.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea1/Actividad9/Lavadora.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea1/Actividad9/MainElectrodomestico.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea1/Actividad9/MainElectrodomestico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea1/Actividad9/Television.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea1/Actividad9/Television.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea1/Caja.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea1/Caja.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea1/CajaCarton.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea1/CajaCarton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea1/Campana.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea1/Campana.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea1/Etiqueta.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea1/Etiqueta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea1/Hora.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea1/Hora.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea1/Hora12.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea1/Hora12.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea1/HoraExacta.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea1/HoraExacta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea1/Instrumento.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea1/Instrumento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea1/MainCaja.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea1/MainCaja.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea1/MainInstrumento.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea1/MainInstrumento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea1/Nota.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea1/Nota.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea1/Piano.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea1/Piano.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea1/Unidad.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea1/Unidad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea2/Actividad2/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea2/Actividad2/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea2/Actividad2/ClienteOrdenadosPorEdad.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea2/Actividad2/ClienteOrdenadosPorEdad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea2/Actividad2/ClienteOrdenadosPorNombre.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea2/Actividad2/ClienteOrdenadosPorNombre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea2/Actividad2/ClienteOrdenadosPorSaldo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea2/Actividad2/ClienteOrdenadosPorSaldo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea2/Actividad2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea2/Actividad2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea2/Actividad3/Circulo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea2/Actividad3/Circulo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea2/Actividad3/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea2/Actividad3/Color.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea2/Actividad3/ComparadorColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea2/Actividad3/ComparadorColor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea2/Actividad3/Cuadrado.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea2/Actividad3/Cuadrado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea2/Actividad3/Figura.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea2/Actividad3/Figura.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea2/Actividad3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea2/Actividad3/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea2/Actividad3/PoligonoRegular.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea2/Actividad3/PoligonoRegular.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tarea2/Actividad3/Triangulo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 5 - Herencia/src/Tarea2/Actividad3/Triangulo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Unidad 4 - POO/src/Tarea1/Actividad10/Hora.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 4 - POO/src/Tarea1/Actividad10/Hora.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Unidad 4 - POO/src/Tarea1/Actividad10/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 4 - POO/src/Tarea1/Actividad10/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="24pzsNHoz1gbaC5LOn6CVKfhXvo" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Juego_RPG.Main" />
+      <module name="Unidad 5 - Herencia" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Juego_RPG.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Tarea2.Actividad3.Main" />
+      <module name="U5 - Herencia" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tarea2.Actividad3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1aa17f8a-857b-430f-8a73-dc995dfa0270" name="Changes" comment="" />
+      <created>1644342522127</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1644342522127</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,10 +1,10 @@
 package Juego_RPG;
 
-public class Mago extends Hombre {
+public class Mago extends Hombre implements Magia {
     private int longitudBarba;
 
-    public Mago(String nombre, int energia, int capAtaque, int capDefensa, boolean estaEncantado, int longitudBarba) {
-        super(nombre, energia, capAtaque, capDefensa, estaEncantado);
+    public Mago(String nombre, int energia, int capAtaque, int capDefensa, int longitudBarba) {
+        super(nombre, energia, capAtaque, capDefensa);
         this.longitudBarba = longitudBarba;
     }
 

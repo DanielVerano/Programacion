@@ -1,13 +1,13 @@
 package Juego_RPG;
 
-public abstract class Personaje {
+public abstract class Personaje implements Comparable<Personaje> {
     private String nombre;
     private int energia;
     private int capAtaque;
     private int capDefensa;
     private boolean encantado;
 
-    public Personaje(String nombre, int energia, int capAtaque, int capDefensa, boolean encantado) {
+    public Personaje(String nombre, int energia, int capAtaque, int capDefensa) {
         if (energia < 0 || energia > 1000) {
             energia = 500;
         }
@@ -23,7 +23,7 @@ public abstract class Personaje {
         this.energia = energia;
         this.capAtaque = capAtaque;
         this.capDefensa = capDefensa;
-        this.encantado = encantado;
+        this.encantado = false;
     }
 
     public String getNombre() {
@@ -68,12 +68,16 @@ public abstract class Personaje {
 
     @Override
     public String toString() {
-        return "Personaje{" +
-                "nombre='" + nombre + '\'' +
+        return "nombre='" + nombre + '\'' +
                 ", energia=" + energia +
                 ", capAtaque=" + capAtaque +
                 ", capDefensa=" + capDefensa +
                 ", encantado=" + encantado +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Personaje personaje) {
+        return this.getEnergia() - personaje.getEnergia();
     }
 }
