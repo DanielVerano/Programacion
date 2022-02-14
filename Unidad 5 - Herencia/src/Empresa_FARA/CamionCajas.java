@@ -41,11 +41,11 @@ public class CamionCajas extends Vehiculo implements Comparable<CamionCajas> {
             peso += prenda.getPeso();
         }
 
-        if (getCargaInicial() + peso <= getCargaMax()) {
+        if (getCarga() + peso <= getCargaMax()) {
             Caja[] result = Arrays.copyOf(cajas, cajas.length + 1);
             result[result.length - 1] = caja;
             cajas = result;
-            setCargaInicial(getCargaInicial() + peso);
+            setCarga(getCarga() + peso);
             return true;
         }
         return false;

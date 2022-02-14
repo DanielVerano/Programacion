@@ -51,6 +51,6 @@ public class Circulo extends PoligonoRegular implements Comparable {
     @Override
     public int compareTo(Object o) {
         Circulo c = (Circulo) o;
-        return (int) (this.radio - c.radio);
+        return Double.compare(this.getRadio(), c.getRadio());
     }
 }

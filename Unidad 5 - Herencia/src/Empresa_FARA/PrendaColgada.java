@@ -17,6 +17,15 @@ public class PrendaColgada extends Prenda {
     }
 
     @Override
+    public void doblar() {
+        System.out.println("La prenda " + getNombre() + " no se puede doblar");
+    }
+
+    public void colgar() {
+        System.out.println("La prenda " + getNombre() + " está colgada");
+    }
+
+    @Override
     public String toString() {
         return "PrendaColgada{" +
                 "altura=" + altura +

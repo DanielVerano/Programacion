@@ -2,7 +2,7 @@ package Empresa_FARA;
 
 import java.util.Arrays;
 
-public class CamionPerchas extends Vehiculo {
+public class CamionPerchas extends Vehiculo implements Comparable<CamionPerchas> {
     private PrendaColgada[] prendas;
 
     public CamionPerchas(String matricula, double cargaMax, Conductor conductor) {
@@ -20,11 +20,11 @@ public class CamionPerchas extends Vehiculo {
     }
 
     public boolean addPrenda(PrendaColgada prenda) {
-        if (getCargaInicial() + prenda.getPeso() <= getCargaMax()) {
+        if (getCarga() + prenda.getPeso() <= getCargaMax()) {
             PrendaColgada[] result = Arrays.copyOf(prendas, prendas.length + 1);
             result[result.length - 1] = prenda;
             prendas = result;
-            setCargaInicial(getCargaInicial() + prenda.getPeso());
+            setCarga(getCarga() + prenda.getPeso());
             return true;
         }
         return false;
@@ -59,5 +59,10 @@ public class CamionPerchas extends Vehiculo {
         return "CamionPerchas{" +
                 "prendas=" + Arrays.toString(prendas) +
                 ", " + super.toString();
+    }
+
+    @Override
+    public int compareTo(CamionPerchas camionPerchas) {
+        return this.prendas.length - camionPerchas.getPrendas().length;
     }
 }

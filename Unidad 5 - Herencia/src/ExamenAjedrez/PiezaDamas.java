@@ -8,7 +8,9 @@ public class PiezaDamas extends PiezaTablero implements Movible {
 
     @Override
     public boolean esMovible(int x, int y) {
-        return estaDentro(x, y) && getPosicionX() - getPosicionY() == x - y;
+        return estaDentro(x, y) &&
+                ((getPosicionX() - getPosicionY() == x - y) ||
+                (getPosicionX() + getPosicionY() == x + y));
     }
 
     @Override
@@ -21,6 +23,6 @@ public class PiezaDamas extends PiezaTablero implements Movible {
 
     @Override
     public String toString() {
-        return "PiezaDamas{} " + super.toString();
+        return "PiezaDamas{ " + super.toString();
     }
 }

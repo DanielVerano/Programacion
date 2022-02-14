@@ -6,8 +6,12 @@ public abstract class PiezaTablero {
     private Color color;
 
     public PiezaTablero(int posicionX, int posicionY, Color color) {
-        this.posicionX = posicionX;
-        this.posicionY = posicionY;
+        if (estaDentro(posicionX, posicionY)) {
+            this.posicionX = posicionX;
+            this.posicionY = posicionY;
+        } else {
+            throw new IllegalArgumentException("Posición no válida");
+        }
         this.color = color;
     }
 
@@ -15,7 +19,7 @@ public abstract class PiezaTablero {
         return posicionX;
     }
 
-    public void setPosicionX(int posicionX) {
+    protected void setPosicionX(int posicionX) {
         this.posicionX = posicionX;
     }
 
@@ -23,7 +27,7 @@ public abstract class PiezaTablero {
         return posicionY;
     }
 
-    public void setPosicionY(int posicionY) {
+    protected void setPosicionY(int posicionY) {
         this.posicionY = posicionY;
     }
 
@@ -37,8 +41,7 @@ public abstract class PiezaTablero {
 
     @Override
     public String toString() {
-        return "PiezaTablero{" +
-                "posicionX=" + posicionX +
+        return "posicionX=" + posicionX +
                 ", posicionY=" + posicionY +
                 ", color=" + color +
                 '}';

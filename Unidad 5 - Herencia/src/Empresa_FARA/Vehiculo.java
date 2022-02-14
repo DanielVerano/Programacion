@@ -3,14 +3,14 @@ package Empresa_FARA;
 public abstract class Vehiculo {
     private String matricula;
     private double cargaMax;
-    private double cargaInicial;
+    private double carga;
     private Conductor conductor;
 
     public Vehiculo(String matricula, double cargaMax, Conductor conductor) {
         this.matricula = matricula;
         this.cargaMax = cargaMax;
         this.conductor = conductor;
-        this.cargaInicial = 0;
+        this.carga = 0;
     }
 
     public String getMatricula() {
@@ -25,12 +25,12 @@ public abstract class Vehiculo {
         return cargaMax;
     }
 
-    public double getCargaInicial() {
-        return cargaInicial;
+    public double getCarga() {
+        return carga;
     }
 
-    public void setCargaInicial(double cargaInicial) {
-        this.cargaInicial = cargaInicial;
+    public void setCarga(double carga) {
+        this.carga = carga;
     }
 
     public Conductor getConductor() {
@@ -47,7 +47,7 @@ public abstract class Vehiculo {
     public String toString() {
         return "matricula='" + matricula + '\'' +
                 ", cargaMax=" + cargaMax +
-                ", cargaInicial=" + cargaInicial +
+                ", carga=" + carga +
                 ", conductor=" + conductor +
                 '}';
     }

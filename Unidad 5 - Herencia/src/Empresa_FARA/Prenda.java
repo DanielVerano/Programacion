@@ -2,7 +2,7 @@ package Empresa_FARA;
 
 import java.util.Objects;
 
-public class Prenda {
+public class Prenda implements Ropa {
     private double precio;
     private String nombre;
     private String codigo;
@@ -49,6 +49,10 @@ public class Prenda {
         this.peso = peso;
     }
 
+    public static int getNumPrendas() {
+        return numPrendas;
+    }
+
     @Override
     public String toString() {
         return "Prenda{" +
@@ -70,5 +74,15 @@ public class Prenda {
     @Override
     public int hashCode() {
         return Objects.hash(codigo);
+    }
+
+    @Override
+    public void devolver() {
+        System.out.println("Devolviendo la prenda con nombre " + getNombre() + " y precio " + getPrecio());
+    }
+
+    @Override
+    public void doblar() {
+        System.out.println("La prenda " + getNombre() + " se puede doblar");
     }
 }
