@@ -26,6 +26,7 @@ public class Caja {
     }
 
     public boolean addPrenda(Prenda prenda) {
+//        No es necesario comparar prendas, pueden haber varias de la misma
         if (prendas.length < CAPMAX) {
             for (int i = 0; i < prendas.length; i++) {
                 if (prendas[i].equals(prenda)) {

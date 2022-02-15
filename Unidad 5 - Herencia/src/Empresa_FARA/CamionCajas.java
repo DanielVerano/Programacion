@@ -16,12 +16,11 @@ public class CamionCajas extends Vehiculo implements Comparable<CamionCajas> {
         int prendas = 0;
 
         for (Caja caja : getCajas()) {
-            for (Prenda prenda : caja.getPrendas()) {
-                prendas++;
-            }
+            prendas += caja.getPrendas().length;
         }
 
         System.out.println("Descargando " + cajas + " cajas y " + prendas + " prendas");
+        this.cajas = new Caja[0];
     }
 
     public Caja[] getCajas() {
@@ -42,6 +41,7 @@ public class CamionCajas extends Vehiculo implements Comparable<CamionCajas> {
         }
 
         if (getCarga() + peso <= getCargaMax()) {
+//            No es necesario crear un nuevo vector para añadir
             Caja[] result = Arrays.copyOf(cajas, cajas.length + 1);
             result[result.length - 1] = caja;
             cajas = result;

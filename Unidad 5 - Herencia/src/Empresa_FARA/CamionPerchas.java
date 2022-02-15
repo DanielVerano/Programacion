@@ -13,6 +13,7 @@ public class CamionPerchas extends Vehiculo implements Comparable<CamionPerchas>
     @Override
     void descargar() {
         System.out.println("Descargando " + prendas.length + " prendas");
+        prendas = new PrendaColgada[0];
     }
 
     public PrendaColgada[] getPrendas() {

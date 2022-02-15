@@ -7,7 +7,7 @@ public class Prenda implements Ropa {
     private String nombre;
     private String codigo;
     private double peso;
-    private static int numPrendas;
+    private static int numPrendas = 0;
 
     public Prenda(double precio, String nombre, String codigo, double peso) {
         this.precio = precio;
