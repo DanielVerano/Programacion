@@ -28,39 +28,19 @@ public class CamionCajas extends Vehiculo implements Comparable<CamionCajas> {
     }
 
     public boolean addCaja(Caja caja) {
-        for (Caja c : cajas) {
-            if (c.equals(caja)) {
-                return false;
-            }
-        }
 
-        double peso = 0;
-
-        for (Prenda prenda : caja.getPrendas()) {
-            peso += prenda.getPeso();
-        }
-
-        if (getCarga() + peso <= getCargaMax()) {
+        if (!existeCaja(caja) && getCarga() + caja.getPeso() <= getCargaMax()) {
 //            No es necesario crear un nuevo vector para añadir
-            Caja[] result = Arrays.copyOf(cajas, cajas.length + 1);
-            result[result.length - 1] = caja;
-            cajas = result;
-            setCarga(getCarga() + peso);
+            cajas = Arrays.copyOf(cajas, cajas.length + 1);
+            cajas[cajas.length - 1] = caja;
             return true;
         }
         return false;
     }
 
     public boolean removeCaja(Caja caja) {
-        boolean existe = false;
 
-        for (Caja c : cajas) {
-            if (c.equals(caja)) {
-                existe = true;
-            }
-        }
-
-        if (existe) {
+        if (existeCaja(caja)) {
             Caja[] result = new Caja[0];
 
             for (Caja c : cajas) {
@@ -73,6 +53,23 @@ public class CamionCajas extends Vehiculo implements Comparable<CamionCajas> {
             return true;
         }
         return false;
+    }
+
+    private boolean existeCaja(Caja caja) {
+        for (Caja c : cajas) {
+            if (c.equals(caja)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public double getCarga() {
+        double result = 0;
+        for (Caja caja : cajas) {
+            result += caja.getPeso();
+        }
+        return result;
     }
 
     @Override

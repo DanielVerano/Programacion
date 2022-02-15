@@ -1,6 +1,5 @@
 package Empresa_FARA;
 
-public interface Ropa {
+public interface Devolver {
     void devolver();
-    void doblar();
 }

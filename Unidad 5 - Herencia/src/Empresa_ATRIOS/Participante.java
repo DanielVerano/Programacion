@@ -2,7 +2,7 @@ package Empresa_ATRIOS;
 
 import java.util.Objects;
 
-public abstract class Participante {
+public abstract class Participante implements Comparable<Participante> {
     private String nombre;
     private int edad;
 
@@ -47,5 +47,10 @@ public abstract class Participante {
     @Override
     public int hashCode() {
         return Objects.hash(nombre, edad);
+    }
+
+    @Override
+    public int compareTo(Participante participante) {
+        return this.getEdad() - participante.getEdad();
     }
 }

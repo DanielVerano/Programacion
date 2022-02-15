@@ -1,6 +1,7 @@
 package Empresa_ATRIOS;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Juego {
     private int year;
@@ -53,9 +54,8 @@ public class Juego {
 
     public boolean addPais(Pais pais) {
         if (!existePais(pais)) {
-            Pais[] result = Arrays.copyOf(paises, paises.length + 1);
-            result[result.length - 1] = pais;
-            paises = result;
+            paises = Arrays.copyOf(paises, paises.length + 1);
+            paises[paises.length - 1] = pais;
             return true;
         }
         return false;
@@ -86,6 +86,31 @@ public class Juego {
         return false;
     }
 
+    public boolean addDeporte(Deporte deporte) {
+        if (!existeDeporte(deporte)) {
+            deportes = Arrays.copyOf(deportes, deportes.length + 1);
+            deportes[deportes.length - 1] = deporte;
+            return true;
+        }
+        return false;
+    }
+
+    public boolean removeDeporte(Deporte deporte) {
+        if (existeDeporte(deporte)) {
+            Deporte[] result = new Deporte[0];
+
+            for (Deporte d : deportes) {
+                if (!d.equals(deporte)) {
+                    result = Arrays.copyOf(result, result.length + 1);
+                    result[result.length - 1] = d;
+                }
+            }
+            deportes = result;
+            return true;
+        }
+        return false;
+    }
+
     private boolean existeDeporte(Deporte deporte) {
         for (Deporte d : deportes) {
             if (d.equals(deporte)) {
@@ -93,6 +118,27 @@ public class Juego {
             }
         }
         return false;
+    }
+
+    public void mostrarPaises() {
+        System.out.println("Países ordenados de manera decreciente por el número de participantes:");
+        Arrays.sort(paises, new Comparator<Pais>() {
+            @Override
+            public int compare(Pais pais1, Pais pais2) {
+                return pais2.getNumParticipantes() - pais1.getNumParticipantes();
+            }
+        });
+        for (Pais pais : paises) {
+            System.out.println(pais);
+        }
+    }
+
+    public void mostrarPaisesParaCeremonia() {
+        System.out.println("Lista de países ordenados por su nombre:");
+        Arrays.sort(paises);
+        for (Pais pais : paises) {
+            System.out.println(pais);
+        }
     }
 
     @Override

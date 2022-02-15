@@ -28,41 +28,48 @@ public class Caja {
     public boolean addPrenda(Prenda prenda) {
 //        No es necesario comparar prendas, pueden haber varias de la misma
         if (prendas.length < CAPMAX) {
-            for (int i = 0; i < prendas.length; i++) {
-                if (prendas[i].equals(prenda)) {
-                    return false;
-                }
-            }
-
-            Prenda[] result = Arrays.copyOf(prendas, prendas.length + 1);
-            result[result.length - 1] = prenda;
-            prendas = result;
+            prendas = Arrays.copyOf(prendas, prendas.length + 1);
+            prendas[prendas.length - 1] = prenda;
             return true;
         }
         return false;
     }
 
     public boolean removePrenda(Prenda prenda) {
-        boolean existe = false;
+//        Solo quitamos una prenda si coincide, las demás las dejamos
+        boolean eliminada = false;
 
-        for (Prenda pr : prendas) {
-            if (pr.equals(prenda)) {
-                existe = true;
-            }
-        }
-
-        if (existe) {
+        if (existePrenda(prenda)) {
             Prenda[] result = new Prenda[0];
 
             for (Prenda pr : prendas) {
-                if (!pr.equals(prenda)) {
+                if (!pr.equals(prenda) || eliminada) {
                     result = Arrays.copyOf(result, result.length + 1);
                     result[result.length - 1] = pr;
+                } else {
+                    eliminada = true;
                 }
             }
             return true;
         }
         return false;
+    }
+
+    private boolean existePrenda(Prenda prenda) {
+        for (Prenda pr : prendas) {
+            if (pr.equals(prenda)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public double getPeso() {
+        double result = 0;
+        for (Prenda prenda : prendas) {
+            result += prenda.getPeso();
+        }
+        return result;
     }
 
     @Override

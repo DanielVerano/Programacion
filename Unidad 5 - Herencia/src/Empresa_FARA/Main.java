@@ -37,13 +37,6 @@ public class Main {
         camion2.addCaja(caja3);
         camion3.addCaja(caja1);
 
-        Comparator<CamionCajas> cmpXCarga = new Comparator<CamionCajas>() {
-            @Override
-            public int compare(CamionCajas c1, CamionCajas c2) {
-                return Double.compare(c1.getCarga(), c2.getCarga());
-            }
-        };
-
         System.out.println("Camiones ordenados por el número de cajas:");
         Arrays.sort(camiones);
 
@@ -52,7 +45,12 @@ public class Main {
         }
 
         System.out.println("Camiones ordenados por la carga:");
-        Arrays.sort(camiones, cmpXCarga);
+        Arrays.sort(camiones, new Comparator<CamionCajas>() {
+            @Override
+            public int compare(CamionCajas c1, CamionCajas c2) {
+                return Double.compare(c1.getCarga(), c2.getCarga());
+            }
+        });
 
         for (CamionCajas c : camiones) {
             System.out.println(c.getMatricula() + " Carga: " + c.getCarga());

@@ -2,7 +2,7 @@ package Empresa_ATRIOS;
 
 import java.util.Objects;
 
-public class Pais {
+public class Pais implements Comparable<Pais> {
     private String nombre;
     private int numParticipantes;
 
@@ -46,5 +46,10 @@ public class Pais {
     @Override
     public int hashCode() {
         return Objects.hash(nombre);
+    }
+
+    @Override
+    public int compareTo(Pais pais) {
+        return this.getNombre().compareTo(pais.getNombre());
     }
 }

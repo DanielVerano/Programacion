@@ -20,27 +20,14 @@ public class CamionPerchas extends Vehiculo implements Comparable<CamionPerchas>
         return prendas;
     }
 
-    public boolean addPrenda(PrendaColgada prenda) {
-        if (getCarga() + prenda.getPeso() <= getCargaMax()) {
-            PrendaColgada[] result = Arrays.copyOf(prendas, prendas.length + 1);
-            result[result.length - 1] = prenda;
-            prendas = result;
-            setCarga(getCarga() + prenda.getPeso());
-            return true;
-        }
-        return false;
+    public void addPrenda(PrendaColgada prenda) {
+        prendas = Arrays.copyOf(prendas, prendas.length + 1);
+        prendas[prendas.length - 1] = prenda;
     }
 
     public boolean removePrenda(PrendaColgada prenda) {
-        boolean existe = false;
 
-        for (PrendaColgada prendaColgada : prendas) {
-            if (prendaColgada.equals(prenda)) {
-                existe = true;
-            }
-        }
-
-        if (existe) {
+        if (existePrenda(prenda)) {
             PrendaColgada[] result = new PrendaColgada[0];
 
             for (PrendaColgada prendaColgada : prendas) {
@@ -51,6 +38,15 @@ public class CamionPerchas extends Vehiculo implements Comparable<CamionPerchas>
             }
             prendas = result;
             return true;
+        }
+        return false;
+    }
+
+    private boolean existePrenda(PrendaColgada prenda) {
+        for (PrendaColgada pr : prendas) {
+            if (pr.equals(prenda)) {
+                return true;
+            }
         }
         return false;
     }

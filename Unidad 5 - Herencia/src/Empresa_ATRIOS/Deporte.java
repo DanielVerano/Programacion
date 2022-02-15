@@ -74,6 +74,14 @@ public abstract class Deporte {
         return false;
     }
 
+    public void mostrarParticipantes() {
+        System.out.println("Participantes ordenados por edad:");
+        Arrays.sort(participantes);
+        for (Participante participante : participantes) {
+            System.out.println(participante);
+        }
+    }
+
     @Override
     public String toString() {
         return "nombre='" + nombre + '\'' +

@@ -2,7 +2,7 @@ package Empresa_FARA;
 
 import java.util.Objects;
 
-public class Prenda implements Ropa {
+public class Prenda implements Devolver, Doblar {
     private double precio;
     private String nombre;
     private String codigo;

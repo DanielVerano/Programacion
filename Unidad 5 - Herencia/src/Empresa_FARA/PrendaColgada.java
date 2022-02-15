@@ -1,6 +1,6 @@
 package Empresa_FARA;
 
-public class PrendaColgada extends Prenda {
+public class PrendaColgada extends Prenda implements Colgar {
     private int altura;
 
     public PrendaColgada(double precio, String nombre, String codigo, double peso, int altura) {
@@ -17,18 +17,19 @@ public class PrendaColgada extends Prenda {
     }
 
     @Override
-    public void doblar() {
-        System.out.println("La prenda " + getNombre() + " no se puede doblar");
+    public String toString() {
+        return "PrendaColgada{" +
+                "altura=" + altura +
+                "} " + super.toString();
     }
 
+    @Override
     public void colgar() {
         System.out.println("La prenda " + getNombre() + " está colgada");
     }
 
     @Override
-    public String toString() {
-        return "PrendaColgada{" +
-                "altura=" + altura +
-                "} " + super.toString();
+    public void doblar() {
+        System.out.println("La prenda " + getNombre() + " no se puede doblar");
     }
 }
