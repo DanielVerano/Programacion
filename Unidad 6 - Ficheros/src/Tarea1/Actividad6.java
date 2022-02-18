@@ -32,33 +32,27 @@ public class Actividad6 {
 
             try {
                 BufferedReader in = new BufferedReader(new FileReader("ficheros/firmas.txt"));
-                BufferedWriter out = new BufferedWriter(new FileWriter("ficheros/firmas.txt", true));
-                String[] nombres = new String[0];
                 String linea = in.readLine();
-
-//                Volcar todos los nombres al vector
-                while (linea != null) {
-                    nombres = Arrays.copyOf(nombres, nombres.length + 1);
-                    nombres[nombres.length - 1] = linea;
-                    linea = in.readLine();
-                }
-
                 boolean existeNombre = false;
-                for (int i = 0; i < nombres.length; i++) {
-                    if (nombres[i].equals(nombre)) {
+
+                while (linea != null) {
+                    if (linea.equals(nombre)) {
                         existeNombre = true;
                         break;
                     }
+                    linea = in.readLine();
                 }
 
                 if (!existeNombre) {
+                    BufferedWriter out = new BufferedWriter(
+                            new FileWriter("ficheros/firmas.txt", true));
                     out.newLine();
                     out.write(nombre);
+                    out.close();
                 } else {
                     System.out.println("El nombre ya existe");
                 }
                 in.close();
-                out.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }

@@ -8,7 +8,9 @@ public class Actividad8 {
         String[] nombres = new String[0];
 
         try {
-            BufferedReader in = new BufferedReader(new FileReader("ficheros/perso1.txt"));
+//            Leer los ficheros y volcarlos a un vector
+            BufferedReader in = new BufferedReader(
+                    new FileReader("ficheros/perso1.txt"));
             String linea = in.readLine();
 
             while (linea != null) {
@@ -27,7 +29,12 @@ public class Actividad8 {
                 linea = in.readLine();
             }
             in.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
+        try {
+//            Crear el nuevo fichero con todos los nombres ordenados
             BufferedWriter out = new BufferedWriter(new FileWriter("ficheros/todos.txt"));
             Arrays.sort(nombres);
 

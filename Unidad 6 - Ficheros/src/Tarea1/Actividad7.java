@@ -23,15 +23,12 @@ public class Actividad7 {
 
                 if (numLineas >= 24) {
                     System.out.println("Seguir leyendo (Pulsa enter)");
-                    String respuesta = sc.nextLine();
-                    if (respuesta.isEmpty()) {
-                        numLineas = 0;
-                    }
+                    sc.nextLine();
+                    numLineas = 0;
                 }
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }
