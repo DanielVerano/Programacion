@@ -3,27 +3,24 @@ package Tarea2;
 import java.io.*;
 import java.util.Scanner;
 
-public class Actividad3 {
+public class Actividad7 {
     public static void main(String[] args) {
+        /*
+        * Actividad 7: Escribir por teclado una frase y guardarla
+        * en un archivo binario. A continuación, recuperarla del archivo
+        * y mostrarla por pantalla.
+        * */
+
         Scanner sc = new Scanner(System.in);
+        System.out.println("Escriba una frase:");
+        String frase = sc.nextLine();
+
         ObjectOutputStream out = null;
 
-//        Escribir números
         try {
-            FileOutputStream archivo = new FileOutputStream("ficheros_binarios/ej3.dat");
+            FileOutputStream archivo = new FileOutputStream("ficheros_binarios/ej7.dat");
             out = new ObjectOutputStream(archivo);
-
-            while (true) {
-                System.out.println("Introduce un número positivo (negativo para parar):");
-                int num = sc.nextInt();
-
-                if (num < 0) {
-                    break;
-                }
-
-                out.writeObject(num);
-            }
-
+            out.writeObject(frase);
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -36,21 +33,14 @@ public class Actividad3 {
             }
         }
 
-//        Leer los números
         ObjectInputStream in = null;
-        try {
-            FileInputStream archivo = new FileInputStream("ficheros_binarios/ej3.dat");
-            in = new ObjectInputStream(archivo);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
         try {
-            while (true) {
-                System.out.println(in.readObject());
-            }
+            FileInputStream archivo = new FileInputStream("ficheros_binarios/ej7.dat");
+            in = new ObjectInputStream(archivo);
+            System.out.println(in.readObject());
         } catch (IOException | ClassNotFoundException e) {
-            System.out.println("He llegado al fin del fichero");
+            e.printStackTrace();
         } finally {
             if (in != null) {
                 try {
