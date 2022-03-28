@@ -1,5 +1,6 @@
 package Tarea2;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
@@ -10,15 +11,9 @@ public class Ejer11 {
     * (elementos que pertenecen al primero, pero no al segundo).
     * */
     public static void main(String[] args) {
-        Set<Integer> numeros1 = new HashSet<>();
-        Set<Integer> numeros2 = new HashSet<>();
-        numeros1.add(1);
-        numeros1.add(2);
-        numeros1.add(3);
-        numeros2.add(1);
-        numeros2.add(2);
-        numeros2.add(3);
-        System.out.println(diferencia(numeros1, numeros2));
+        Set<String> set1 = new HashSet<>(Arrays.asList("A","B","C"));
+        Set<String> set2 = new HashSet<>(Arrays.asList("A","C","D"));
+        System.out.println(diferencia(set1, set2));
     }
 
     public static Set diferencia(Set conjunto1, Set conjunto2) {
