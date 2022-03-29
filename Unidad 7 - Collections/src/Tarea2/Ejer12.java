@@ -19,6 +19,7 @@ public class Ejer12 {
     }
 
     public static boolean incluido(Set conjunto1, Set conjunto2) {
+//        return conjunto2.containsAll(conjunto1);
         Iterator it = conjunto1.iterator();
 
         while (it.hasNext()) {
