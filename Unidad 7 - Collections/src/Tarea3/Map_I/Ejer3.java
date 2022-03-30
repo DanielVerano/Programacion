@@ -1,7 +1,9 @@
 package Tarea3.Map_I;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 import static Tarea3.Map_I.Ejer1.calcularClave;
 
@@ -28,6 +30,17 @@ public class Ejer3 {
 //        3. Iterar sobre las entradas del mapa (entrySet())
         for (Map.Entry<Integer, String> entry : nombres.entrySet()) {
             System.out.println("La clave " + entry.getKey() + " está asociada al nombre " + entry.getValue());
+        }
+
+//        3.1 Iterar sobre las entradas del mapa con un iterator
+        Set<Map.Entry<Integer, String>> entradas = nombres.entrySet();
+
+        Iterator<Map.Entry<Integer, String>> it = entradas.iterator();
+
+        while (it.hasNext()) {
+            Map.Entry<Integer, String> entry = it.next();
+            System.out.println("Clave: " + entry.getKey());
+            System.out.println("Valor: " + entry.getValue());
         }
     }
 }

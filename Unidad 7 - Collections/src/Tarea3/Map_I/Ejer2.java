@@ -18,8 +18,10 @@ public class Ejer2 {
         String dni = sc.nextLine();
         Integer clave = calcularClave(dni);
 
-        System.out.println("Valor de la clave: " + nombres.get(clave));
-
-
+        if (nombres.containsKey(clave)) {
+            System.out.println("Valor de la clave: " + nombres.get(clave));
+        } else {
+            System.out.println("No existe un DNI asociado en el mapa");
+        }
     }
 }
