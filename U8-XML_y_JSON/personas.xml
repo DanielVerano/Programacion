@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<personas>
+  <!-- COMENTARIO A -->
+  <persona id="1" dni="22222X">
+    <nombre>Pepe</nombre>
+    <edad>14</edad>
+  </persona>
+  <!-- COMENTARIO B -->
+  <persona>
+    <nombre>María</nombre>
+    <edad>51</edad>
+  </persona>
+  <!-- COMENTARIO C -->
+  <persona>
+    <nombre>Raúl</nombre>
+    <edad>22</edad>
+  </persona>
+</personas>

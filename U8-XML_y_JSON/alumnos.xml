@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<alumnos>
+  <alumno>
+    <nombre>Juan D. Perez</nombre>
+  </alumno>
+  <alumno>
+    <nombre>Pepe Lopez</nombre>
+  </alumno>
+</alumnos>
