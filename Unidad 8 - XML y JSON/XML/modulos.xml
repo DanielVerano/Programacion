@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ciclo>
+	<modulo id="1">
+		<nombre>LM</nombre>
+		<horas>4</horas>
+	</modulo>
+	<modulo id="2">
+		<nombre>PROG</nombre>
+		<horas>8</horas>
+	</modulo>
+	<modulo id="3">
+		<nombre>BBDD</nombre>
+		<horas>6</horas>
+	</modulo>
+	<modulo id="4">
+		<nombre>SSII</nombre>
+		<horas>6</horas>
+	</modulo>
+	<modulo id="5">
+		<nombre>ENDES</nombre>
+		<horas>3</horas>
+	</modulo>
+	<modulo id="6">
+		<nombre>FOL</nombre>
+		<horas>3</horas>
+	</modulo>
+</ciclo>
