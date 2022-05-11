@@ -1,16 +1,10 @@
 import java.sql.*;
 import java.util.Scanner;
 
-public class Ejer1 {
-    public static void main(String[] args) {
+public class Consultas {
+
+    public static void pagosCliente() {
         Connection con = ConexionDB.getConnection();
-
-//        Ejer1.pagosCliente(con);
-//        Ejer1.infoPedido(con);
-        Ejer1.datosJefe(con);
-    }
-
-    public static void pagosCliente(Connection con) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduzca un número de cliente: (customerNumber)");
         String numero = sc.nextLine();
@@ -35,7 +29,8 @@ public class Ejer1 {
         }
     }
 
-    public static void infoPedido(Connection con) {
+    public static void infoPedido() {
+        Connection con = ConexionDB.getConnection();
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduzca un número de pedido:");
         String numero = sc.nextLine();
@@ -71,23 +66,56 @@ public class Ejer1 {
         }
     }
 
-    public static void datosJefe(Connection con) {
+    public static void datosJefe() {
+        Connection con = ConexionDB.getConnection();
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduzca el número de un empleado: (employeeNumber)");
-        String numero = sc.nextLine();
+        String numEmpleado = sc.nextLine();
         try {
-            PreparedStatement preparedStatement = con.prepareStatement("SELECT e.firstName , e2.firstName , e2.lastName \n" +
-                    "FROM employees e \n" +
-                    "LEFT JOIN employees e2 \n" +
-                    "ON e.reportsTo = e2.employeeNumber \n" +
-                    "WHERE e2.employeeNumber = ?;");
-            preparedStatement.setString(1, numero);
+            PreparedStatement preparedStatement = con.prepareStatement("SELECT e2.firstName , e2.lastName\n" +
+                    "FROM employees e\n" +
+                    "LEFT JOIN employees e2\n" +
+                    "ON e.reportsTo = e2.employeeNumber\n" +
+                    "WHERE e.employeeNumber = ?;");
+            preparedStatement.setString(1, numEmpleado);
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
-                System.out.println(resultSet.getString(1));
-                System.out.println(resultSet.getString(2));
+                System.out.println("Nombre del jefe: " + resultSet.getString(1));
+                System.out.println("Apellidos del jefe: " + resultSet.getString(2));
             }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void listarEmpleadosCiudad() {
+        Connection con = ConexionDB.getConnection();
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Introduzca la ciudad de una oficina:");
+        String nombre = sc.nextLine();
+
+        try {
+            PreparedStatement ps = con.prepareStatement("SELECT *\n" +
+                    "FROM employees e \n" +
+                    "INNER JOIN offices o \n" +
+                    "ON e.officeCode = o.officeCode \n" +
+                    "WHERE o.city = ?;");
+
+            ps.setString(1, nombre);
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.getFetchSize() == 0) {
+                System.out.println("No existen empleados para esa oficina");
+            }
+
+            while (rs.next()) {
+                System.out.print(rs.getString(1) + " ");
+                System.out.print(rs.getString(2) + " ");
+                System.out.println(rs.getString(3));
+            }
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
